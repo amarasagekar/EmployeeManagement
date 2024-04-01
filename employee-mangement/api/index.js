@@ -9,3 +9,18 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+mongoose
+  .connect("mongodb+srv://amar:amar24@cluster0.wf4ye.mongodb.net/", {
+
+  })
+  .then(() => {
+    console.log("connected to db");
+  })
+  .catch((error) => {
+    console.log("Error connecting to db", error);
+  });
+
+app.listen(port, () => {
+  console.log("server is running on port 8000");
+});
