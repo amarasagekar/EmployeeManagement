@@ -2,6 +2,8 @@ import { StyleSheet, Text, View, ScrollView, Pressable } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { Feather, Entypo, Ionicons, Octicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 const index = () => {
   return (
     <ScrollView>
@@ -275,6 +277,26 @@ const index = () => {
                 <Entypo name="chevron-right" size={24} color="black" />
               </View>
             </Pressable>
+          </View>
+          <View>
+            <View>
+              <View
+                style={{
+                  width: 35,
+                  height: 35,
+                  borderRadius: 7,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="guy-fawkes-mask"
+                  size={24}
+                  color="black"
+                />
+              </View>
+            </View>
           </View>
         </View>
       </LinearGradient>
