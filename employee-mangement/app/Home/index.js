@@ -278,8 +278,24 @@ const index = () => {
               </View>
             </Pressable>
           </View>
-          <View>
-            <View>
+          <View
+            style={{
+              marginTop: 20,
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#f79d00",
+                borderRadius: 6,
+                padding: 12,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
               <View
                 style={{
                   width: 35,
@@ -296,6 +312,31 @@ const index = () => {
                   color="black"
                 />
               </View>
+              <Text style={{ marginTop: 7 }}>Attendance Criteria</Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: "#f79d00",
+                borderRadius: 6,
+                padding: 12,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
+              <View
+                style={{
+                  width: 35,
+                  height: 35,
+                  borderRadius: 7,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Feather name="bar-chart" size={24} color="black" />
+              </View>
+              <Text style={{ marginTop: 7 }}>Increased Workflow</Text>
             </View>
           </View>
         </View>
