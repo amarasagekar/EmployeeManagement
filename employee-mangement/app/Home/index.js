@@ -316,7 +316,7 @@ const index = () => {
             </View>
             <View
               style={{
-                backgroundColor: "#f79d00",
+                backgroundColor: "#ABCABA",
                 borderRadius: 6,
                 padding: 12,
                 alignItems: "center",
@@ -337,6 +337,67 @@ const index = () => {
                 <Feather name="bar-chart" size={24} color="black" />
               </View>
               <Text style={{ marginTop: 7 }}>Increased Workflow</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 20,
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: "#D3CCE3",
+                borderRadius: 6,
+                padding: 12,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
+              <View
+                style={{
+                  width: 35,
+                  height: 35,
+                  borderRadius: 7,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="guy-fawkes-mask"
+                  size={24}
+                  color="black"
+                />
+              </View>
+              <Text style={{ marginTop: 7 }}>Cost Saving</Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: "#bdc3c7",
+                borderRadius: 6,
+                padding: 12,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
+              <View
+                style={{
+                  width: 35,
+                  height: 35,
+                  borderRadius: 7,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Feather name="bar-chart" size={24} color="black" />
+              </View>
+              <Text style={{ marginTop: 7 }}>Employee Performance</Text>
             </View>
           </View>
         </View>
