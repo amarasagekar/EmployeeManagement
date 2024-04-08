@@ -61,3 +61,13 @@ app.post("/addEmployee", async (req, res) => {
     res.status(500).json({ message: "Failed to add an employee" });
   }
 });
+
+// endpoint to fetch all the employee
+app.get("/employee", async(req, res) => {
+try {
+  const employees = await Employee.find();
+  res.status(200).json(employees);
+} catch (error) {
+  res.status(500).json({message:"Failed to retrive the employee"})
+}
+})
