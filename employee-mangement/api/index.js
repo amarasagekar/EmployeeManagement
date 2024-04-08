@@ -11,9 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 mongoose
-  .connect("mongodb+srv://amar:amar24@cluster0.wf4ye.mongodb.net/", {
-
-  })
+  .connect("mongodb+srv://amar:amar24@cluster0.wf4ye.mongodb.net/", {})
   .then(() => {
     console.log("connected to db");
   })
@@ -23,4 +21,43 @@ mongoose
 
 app.listen(port, () => {
   console.log("server is running on port 8000");
+});
+
+const Employee = require("./models/employee");
+const Attendance = require("./models/attendance");
+
+//endpoint to register a employee
+app.post("/addEmployee", async (req, res) => {
+  try {
+    const {
+      employeeName,
+      employeeId,
+      designation,
+      phoneNumber,
+      dateOfbirth,
+      joiningDate,
+      activeEmployee,
+      salary,
+      address,
+    } = req.body;
+
+    //create new employee
+    const newEmpoyee = new Employee({
+      employeeName,
+      employeeId,
+      designation,
+      phoneNumber,
+      dateOfbirth,
+      joiningDate,
+      activeEmployee,
+      salary,
+      address,
+    });
+
+    await newEmpoyee.save();
+    res.status(201).json({message:"Employee saved successfully", employee: newEmpoyee});
+  } catch (error) {
+    console.log("Error Creating employee", error);
+    res.status(500).json({ message: "Failed to add an employee" });
+  }
 });
