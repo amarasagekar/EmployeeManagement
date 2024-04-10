@@ -2,9 +2,13 @@ import { StyleSheet, Text, View, TextInput } from "react-native";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const employees = () => {
   const [employees, setEmployees] = useState([]);
+  const [input, setInput] = useState("");
+  const router = useRouter();
+
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
@@ -44,8 +48,21 @@ const employees = () => {
             borderRadius: 4,
           }}
         >
-          <AntDesign name="serahc1" size={24} color="black" />
-          <TextInput placeholder="Search" />
+          <AntDesign name="serahc1" size={20} color="black" />
+          <TextInput
+            value={input}
+            onChnageText={(text) => setInput(text)}
+            style={{ flex: 1 }}
+            placeholder="Search"
+          />
+
+          {employees.length > 0 && (
+            <View>
+              <Pressable onPress={() => router.push("/Home/adddetails")}>
+                <AntDesign name="pluscircle" size={24} color="#0072b1" />
+              </Pressable>
+            </View>
+          )}
         </Pressable>
       </View>
     </View>
