@@ -58,7 +58,7 @@ const employees = () => {
 
           {employees.length > 0 && (
             <View>
-              <Pressable onPress={() => router.push("/Home/adddetails")}>
+              <Pressable>
                 <AntDesign name="pluscircle" size={24} color="#0072b1" />
               </Pressable>
             </View>
